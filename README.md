@@ -7,7 +7,7 @@ Dans cette partie nous presenterons des différents choix de construction que no
 ###La classe Animal
 La classe Animal a été structurée suite à un dialogue entre tous les étudiants de l\'option.
 Voici le diagramme UML la représentant:
-[photo]: Animal.jpg "Diagramme UML de la classe"
+![UML](Animal.jpg "Diagramme UML de la classe")
 
 ###Les sous-classes animaux
 
