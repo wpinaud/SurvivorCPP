@@ -56,13 +56,16 @@ Chaque partie se déroule automatiquement car le jeu est un simulateur de vie.
 Notre boucle principale comporte une boucle faisant 1000 itérations.
 
 Lors d'un tour de boucle :
-0) Chaque animal est créé sur une case aléatoire de la table de jeu.
-1) On appel la fonction déplacer de tous les animaux présents sur le plateau de jeu.
-2) On vérifie chaque case :
-	* si la case est vide on passe à la suivante.
-	* si plusieurs animaux sont sur une même case on tire au sort deux animaux, on les fait combattre en appelant leur fonction attaquer, on compare les réponses puis on appel la fonction suicider du perdant.
-4) On efface le plateau de jeu du tour précédent.
-3) On affiche le plateau de jeu mis à jour.
+
+0. Chaque animal est créé sur une case aléatoire de la table de jeu.
+1. On appel la fonction déplacer de tous les animaux présents sur le plateau de jeu.
+2. On vérifie chaque case :
+
+  * si la case est vide on passe à la suivante.
+  * si plusieurs animaux sont sur une même case on tire au sort deux animaux, on les fait combattre en appelant leur fonction attaquer, on compare les réponses puis on appel la fonction suicider du perdant.
+
+4. On efface le plateau de jeu du tour précédent.
+3. On affiche le plateau de jeu mis à jour.
 
 ###Fonction de combat
 Notre fonction de combat utilise les propriétés du polymorphisme.
@@ -70,13 +73,16 @@ Elle renvoit un pointeur vers un animal et prend en arguments des pointeurs vers
 Cela nous permet de faire combattre n'importe quelle espèce entre elle.
 
 ####Fonctionnement
-1) On stock le résultat des fonctions attaquer des deux animaux.
-2) On les compare:
-	* Feuille/Feuille = nul, donc on choisit un vainqueur aléatoirement.
-	* Feuille/Pierre = La feuille gagne.
-	* Feuille/Ciseau = Le ciseau gagne.
-3) On appel le destructeur du perdant.
-4) On renvoit l'animal vainqueur.
+
+1. On stock le résultat des fonctions attaquer des deux animaux.
+2. On les compare:
+
+  * Feuille/Feuille = nul, donc on choisit un vainqueur aléatoirement.
+  * Feuille/Pierre = La feuille gagne.
+  * Feuille/Ciseau = Le ciseau gagne.
+
+3. On appel le destructeur du perdant.
+4. On renvoit l'animal vainqueur.
 
 ###Comment affiche-t-on la table de jeu ?
 
