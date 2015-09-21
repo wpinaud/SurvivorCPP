@@ -15,12 +15,14 @@ Ainsi nos classes deviennent instanciable.
 De plus, les attributs de la classe mère étant private, nous pouvons les réutiliser dans les classes filles par le principe d'héritage.
 
 Nous avons pris en compte les spécificités de chaque espèces, par exemple l'attaque de la classe Pierre est:
-'''std::string Pierre::attaquer(){
+```c
+std::string Pierre::attaquer(){
     return "PIERRE";
-}'''
+}```
 
 et la fonction '''deplacer()''' de la classe loup:
-'''void Lion::deplace(int i){
+```c
+void Lion::deplace(int i){
     //mouvement d'une case vers le bas
     if (i%2==0){
         y=(y+1)%82;
@@ -29,15 +31,15 @@ et la fonction '''deplacer()''' de la classe loup:
     else {
         x=(x+1)%82;
     }
-}'''
+}```
 
 Lors de la contruction d'un nouvel objet des sous classes d'animaux ses coordonnées x et y sont initialisées à l'aide d'un générateur de nombre aléatoire entre 0 et 82 (la taille du tablea).
 Donc à chaque début de partie les animaux sont réparti aléatoirement sur la table de jeu.
 
 Si le match est nul alors on selectionne un vainqueur de maniere aléatoire grâce à l'opérateur ternaire:
-'''
+```c
 vainqueur = ( rand()%2 ? animal1 : animal2 );
-'''
+```
 
 
 ###La classe DarkLoup
