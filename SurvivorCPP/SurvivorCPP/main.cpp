@@ -62,13 +62,17 @@ Animal* combattre(Animal* animal1, Animal* animal2, bool verbose){
     string attaque1 = animal1->attaquer();
     string attaque2 = animal2->attaquer();
     
+    if (verbose) {
+        cout << animal1->nom() << " avec "<< attaque1 << " contre " << animal2->nom()<<" avec "<< attaque2 << endl;
+    }
+    
     if (attaque1=="FEUILLE"){
         if (attaque2=="PIERRE") {
             delete animal2;
             vainqueur = animal1;
         }
         else if (attaque2=="FEUILLE") {
-            delete animal1;
+            //delete animal1;
             vainqueur = ( rand()%2 ? animal1 : animal2 );
         }
         else if (attaque2=="CISEAU"){
@@ -78,7 +82,7 @@ Animal* combattre(Animal* animal1, Animal* animal2, bool verbose){
     }
     else if (attaque1=="PIERRE"){
         if (attaque2=="PIERRE") {
-            delete animal2;
+            //delete animal2;
             vainqueur = ( rand()%2 ? animal1 : animal2 );
         }
         else if (attaque2=="FEUILLE") {
@@ -100,13 +104,12 @@ Animal* combattre(Animal* animal1, Animal* animal2, bool verbose){
             vainqueur = animal1;
         }
         else if (attaque2=="CISEAU"){
-            delete animal2;
+            //delete animal2;
             vainqueur = ( rand()%2 ? animal1 : animal2 );
         }
     }
     
     if (verbose) {
-        cout << animal1->nom() << " avec "<< attaque1 << " contre " << animal2->nom()<<" avec "<< attaque2 << endl;
         cout << "  Vainqueur round: "<< vainqueur->nom() << endl;
     }
     return vainqueur;

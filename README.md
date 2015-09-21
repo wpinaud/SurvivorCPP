@@ -22,7 +22,7 @@ return "PIERRE";
 }
 ```
 
-et la fonction ```deplacer()``` de la classe loup:
+et la fonction ```deplacer()``` de la classe lion:
 
 ```c
 void Lion::deplace(int i){
