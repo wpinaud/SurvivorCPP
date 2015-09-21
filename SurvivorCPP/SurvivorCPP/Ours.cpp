@@ -1,12 +1,16 @@
 #include "Ours.hpp"
 
 Ours::Ours(){
+    y=rand()%82;
+    x=rand()%82;
+}
+
+Ours::~Ours(){
     
 }
 
 void Ours::deplace(int i){
-    int t= pas%16;
-    t/=4;
+    int t= i%4;
     
     switch (t){
         case 0: //bas
@@ -24,10 +28,8 @@ void Ours::deplace(int i){
         case 3: //gauche
             x--;
             break;
-            
     }
     
-    pas++;
     aBouge = true;
 }
 
@@ -39,5 +41,6 @@ char Ours::nom(){
 std::string Ours::attaquer(){
     return "FEUILLE";
 }
+
 
 

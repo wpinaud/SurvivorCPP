@@ -10,7 +10,11 @@ private:
     int pas;
     
 public:
+    //Constructeur et destructeur
     Ours();
+    virtual ~Ours();
+    
+    //Les méthodes redéfinies
     void deplace(int i);
     char nom();
     std::string attaquer();

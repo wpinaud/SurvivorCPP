@@ -1,8 +1,8 @@
 #include "Lion.hpp"
 
-Lion::Lion() : Animal(){
-    this->x = 0;
-    this->y = 0;
+Lion::Lion(){
+    x = rand()%82;
+    y = rand()%82;
 }
 
 void Lion::deplace(int i){
@@ -22,13 +22,14 @@ char Lion::nom(){
 }
 
 std::string Lion::attaquer(){
-    //rsrand (time(NULL));
-    int i = (rand()%2)*2; // gÈnËre un nombre alÈatoire (0 ou 2)
-    
+    int i = rand()%2*2; // génère un nombre aléatoire (0 ou 2)
     std::string attaques[3];
     attaques[0]="CISEAU";
     attaques[1] = "PIERRE";
     attaques[2] = "FEUILLE";
     
     return attaques[i];
+}
+
+Lion::~Lion(){
 }

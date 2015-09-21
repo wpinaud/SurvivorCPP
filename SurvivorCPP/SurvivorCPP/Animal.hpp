@@ -10,6 +10,9 @@
 #define ANIMAUX_H_
 #include <iostream>
 #include <vector>
+#include <stdlib.h>     /* srand, rand */
+#include <time.h>
+
 using namespace std;
 
 class Animal{
@@ -22,12 +25,13 @@ public:
     virtual void deplace(int i)=0;
     virtual char nom()=0;
     virtual string attaquer()=0;
+    virtual ~Animal();
     
     int getX(){ return x;};
     int getY(){ return y;};
     bool getaBouge(){ return aBouge;};
     
-    void suicide() { this->~Animal();};
+    void suicide() {};
 };
 
 class Coordonnees {

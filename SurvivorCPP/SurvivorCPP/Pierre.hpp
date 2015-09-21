@@ -16,7 +16,11 @@
 class Pierre : public Animal{
     
 public:
+    //Constructeur et destructeur
     Pierre();
+    virtual ~Pierre();
+    
+    //Les méthodes redéfinies
     char nom();
     void deplace(int i);
     std::string attaquer();

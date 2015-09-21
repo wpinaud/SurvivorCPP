@@ -9,8 +9,8 @@
 #include "Pierre.hpp"
 
 Pierre::Pierre(){
-    this->x=0;
-    this->y=0;
+    x = rand()%82;
+    y = rand()%82;
 }
 
 void Pierre::deplace(int i){
@@ -25,4 +25,8 @@ char Pierre::nom(){
 
 std::string Pierre::attaquer(){
     return "PIERRE";
+}
+
+Pierre::~Pierre(){
+    
 }

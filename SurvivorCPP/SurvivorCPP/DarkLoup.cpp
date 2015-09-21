@@ -2,7 +2,8 @@
 
 DarkLoup::DarkLoup()
 {
-    
+    x = rand()%82;
+    y = rand()%82;
 }
 
 void DarkLoup::deplace(int i){
@@ -15,5 +16,9 @@ char DarkLoup::nom(){
 }
 
 std::string DarkLoup::attaquer(){
-    return "MEGAATTAQUE";
+    return "PIERRE";
+}
+
+DarkLoup::~DarkLoup(){
+    
 }

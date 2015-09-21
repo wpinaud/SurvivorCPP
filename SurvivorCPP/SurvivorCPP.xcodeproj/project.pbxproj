@@ -11,8 +11,8 @@
 		45F1941A1BAC3BC4007FDD88 /* Pierre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45F194181BAC3BC4007FDD88 /* Pierre.cpp */; settings = {ASSET_TAGS = (); }; };
 		45F1941D1BAC3BD2007FDD88 /* Lion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45F1941B1BAC3BD2007FDD88 /* Lion.cpp */; settings = {ASSET_TAGS = (); }; };
 		45F194201BAC3BDD007FDD88 /* Ours.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45F1941E1BAC3BDD007FDD88 /* Ours.cpp */; settings = {ASSET_TAGS = (); }; };
-		45F194231BAC3BEA007FDD88 /* Animal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45F194211BAC3BEA007FDD88 /* Animal.cpp */; settings = {ASSET_TAGS = (); }; };
 		45F194261BAC3C50007FDD88 /* DarkLoup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45F194241BAC3C50007FDD88 /* DarkLoup.cpp */; settings = {ASSET_TAGS = (); }; };
+		45F1942B1BAF2806007FDD88 /* Animal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 45F1942A1BAF2806007FDD88 /* Animal.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,10 +36,10 @@
 		45F1941C1BAC3BD2007FDD88 /* Lion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Lion.hpp; sourceTree = "<group>"; };
 		45F1941E1BAC3BDD007FDD88 /* Ours.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ours.cpp; sourceTree = "<group>"; };
 		45F1941F1BAC3BDD007FDD88 /* Ours.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ours.hpp; sourceTree = "<group>"; };
-		45F194211BAC3BEA007FDD88 /* Animal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animal.cpp; sourceTree = "<group>"; };
 		45F194221BAC3BEA007FDD88 /* Animal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Animal.hpp; sourceTree = "<group>"; };
 		45F194241BAC3C50007FDD88 /* DarkLoup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DarkLoup.cpp; sourceTree = "<group>"; };
 		45F194251BAC3C50007FDD88 /* DarkLoup.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DarkLoup.hpp; sourceTree = "<group>"; };
+		45F1942A1BAF2806007FDD88 /* Animal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animal.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +76,10 @@
 				45F1941E1BAC3BDD007FDD88 /* Ours.cpp */,
 				45F1941F1BAC3BDD007FDD88 /* Ours.hpp */,
 				45F1941B1BAC3BD2007FDD88 /* Lion.cpp */,
-				45F194211BAC3BEA007FDD88 /* Animal.cpp */,
 				45F194241BAC3C50007FDD88 /* DarkLoup.cpp */,
 				45F194251BAC3C50007FDD88 /* DarkLoup.hpp */,
 				45F194221BAC3BEA007FDD88 /* Animal.hpp */,
+				45F1942A1BAF2806007FDD88 /* Animal.cpp */,
 				45F1941C1BAC3BD2007FDD88 /* Lion.hpp */,
 				45F194181BAC3BC4007FDD88 /* Pierre.cpp */,
 				45F194191BAC3BC4007FDD88 /* Pierre.hpp */,
@@ -143,12 +143,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F194231BAC3BEA007FDD88 /* Animal.cpp in Sources */,
 				45F194261BAC3C50007FDD88 /* DarkLoup.cpp in Sources */,
 				45F1941D1BAC3BD2007FDD88 /* Lion.cpp in Sources */,
 				45F1941A1BAC3BC4007FDD88 /* Pierre.cpp in Sources */,
 				45F194201BAC3BDD007FDD88 /* Ours.cpp in Sources */,
 				45F194121BAC3B71007FDD88 /* main.cpp in Sources */,
+				45F1942B1BAF2806007FDD88 /* Animal.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
