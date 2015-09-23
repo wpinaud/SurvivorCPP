@@ -3,7 +3,7 @@
 	<stdio.h>
 	"Animal.hpp"
 
-1443012871 z:\survivorcpp\survivorcpp\survivorcpp\animal.hpp
+1443015208 z:\survivorcpp\survivorcpp\survivorcpp\animal.hpp
 	<iostream>
 	<vector>
 	<stdlib.h>
@@ -24,7 +24,7 @@
 	<stdio.h>
 	<string>
 
-1443013152 source:z:\survivorcpp\survivorcpp\survivorcpp\main.cpp
+1443015171 source:z:\survivorcpp\survivorcpp\survivorcpp\main.cpp
 	<iostream>
 	"Lion.hpp"
 	"Ours.hpp"
@@ -41,7 +41,7 @@
 	<string>
 	"Animal.hpp"
 
-1443012871 source:z:\survivorcpp\survivorcpp\survivorcpp\ours.cpp
+1443015285 source:z:\survivorcpp\survivorcpp\survivorcpp\ours.cpp
 	"Ours.hpp"
 
 1443012871 source:z:\survivorcpp\survivorcpp\survivorcpp\pierre.cpp
