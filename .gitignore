@@ -1,0 +1,5 @@
+*.xcbkptlist
+SurvivorCPP/SurvivorCPP.xcodeproj/project.xcworkspace/xcuserdata/willispinaud.xcuserdatad/UserInterfaceState.xcuserstate
+*.o
+
+*.xcuserstate
