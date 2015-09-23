@@ -1,0 +1,49 @@
+# depslib dependency file v1.0
+1443012871 source:z:\survivorcpp\survivorcpp\survivorcpp\animal.cpp
+	<stdio.h>
+	"Animal.hpp"
+
+1443012871 z:\survivorcpp\survivorcpp\survivorcpp\animal.hpp
+	<iostream>
+	<vector>
+	<stdlib.h>
+	<time.h>
+
+1443012871 source:z:\survivorcpp\survivorcpp\survivorcpp\darkloup.cpp
+	"DarkLoup.hpp"
+
+1443012871 z:\survivorcpp\survivorcpp\survivorcpp\darkloup.hpp
+	<string>
+	"Animal.hpp"
+
+1443012871 source:z:\survivorcpp\survivorcpp\survivorcpp\lion.cpp
+	"Lion.hpp"
+
+1443012871 z:\survivorcpp\survivorcpp\survivorcpp\lion.hpp
+	"Animal.hpp"
+	<stdio.h>
+	<string>
+
+1443013152 source:z:\survivorcpp\survivorcpp\survivorcpp\main.cpp
+	<iostream>
+	"Lion.hpp"
+	"Ours.hpp"
+	"Pierre.hpp"
+	"DarkLoup.hpp"
+
+1443012871 z:\survivorcpp\survivorcpp\survivorcpp\ours.hpp
+	"Animal.hpp"
+	<stdio.h>
+	<string>
+
+1443012871 z:\survivorcpp\survivorcpp\survivorcpp\pierre.hpp
+	<stdio.h>
+	<string>
+	"Animal.hpp"
+
+1443012871 source:z:\survivorcpp\survivorcpp\survivorcpp\ours.cpp
+	"Ours.hpp"
+
+1443012871 source:z:\survivorcpp\survivorcpp\survivorcpp\pierre.cpp
+	"Pierre.hpp"
+
