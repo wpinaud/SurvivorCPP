@@ -144,4 +144,15 @@ void deplacerTous(vector<Animal*> Animaux, int i){
     for (int i = 0; i<=Animaux.size(); i++) {
         Animaux[0]->deplace(i);
     }
+    for (int i = 0; i<=Animaux.size(); i++) {
+        for (int j = i+1; j<=Animaux.size(); j++) {
+            if (Animaux[i]->getX()==Animaux[j]->getX()) {
+                if (Animaux[i]->getY()==Animaux[j]->getY()) {
+                    Animal* vainqueur = combattre(Animaux[i], Animaux[j], true);
+                }
+            }
+        }
+    }
 }
+
+
