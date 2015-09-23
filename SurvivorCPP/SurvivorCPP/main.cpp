@@ -13,7 +13,7 @@
 #include "DarkLoup.hpp"
 using namespace std;
 
-void affiche (int TAILLEJEU);
+void affiche (int TAILLEJEU, vector<Animal*> Animaux);
 Animal* combattre(Animal *animal1, Animal *animal2, bool verbose); //Comment mettre une valeur par defaut ??
 
 void creeTous(int nb_lion, int nb_ours, int nb_loup, int nb_pierre, vector<Animal*> &Animaux);
@@ -30,7 +30,7 @@ int main(int argc, const char * argv[]) {
     creeTous(10, 10, 10, 10, Animaux);
 
     int TAILLEJEU = 82;
-    affiche (TAILLEJEU);
+    affiche (TAILLEJEU, Animaux);
 
     for (int i=0; i<1; i++){
         //Lors de la victoire d'un animal supprimer le perdant du vecteur ou trouver un moyen de le faire directement avec le destructeur
@@ -59,7 +59,7 @@ void affiche (int TAILLEJEU, vector<Animal*> Animaux){
     }
     for (i=0; i<TAILLEJEU; i++){
         for (j=0; j<TAILLEJEU; j++){
-            cout << plat[i][j]<< " \t";
+            cout << plat[i][j]<< ".";
         }
         cout << endl;
     }

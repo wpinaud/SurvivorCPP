@@ -20,17 +20,17 @@ protected:
     int x;
     int y;
     bool aBouge;
-    
+
 public:
     virtual void deplace(int i)=0;
     virtual char nom()=0;
     virtual string attaquer()=0;
     virtual ~Animal();
-    
+
     int getX(){ return x;};
     int getY(){ return y;};
     bool getaBouge(){ return aBouge;};
-    
+
     void suicide() {};
 };
 
