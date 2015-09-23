@@ -9,7 +9,7 @@ void DarkLoup::deplace(int i){
     int t= i%82;
 
     if (t=0){y++;}
-    else {x++;};
+    else {x++;}; /* Méthode "stupide": on parcourt le terrain et on attaque aléatoirement */
     /*switch (t){
         case 0: //bas
             y++;
@@ -25,7 +25,7 @@ void DarkLoup::deplace(int i){
 
         case 3: //gauche
             x--;
-            break;*/
+            break;*/ /* Méthode "intel": on fait le mouvement d'un ours et on joue principalement pierre*/
     }
 }
 
