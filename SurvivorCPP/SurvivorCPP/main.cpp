@@ -15,41 +15,36 @@ using namespace std;
 
 void affiche (int TAILLEJEU);
 Animal* combattre(Animal *animal1, Animal *animal2, bool verbose); //Comment mettre une valeur par defaut ??
-//void creeTous(int nb_lion, int nb_ours, int nb_loup, int nb_pierre, vector<Animal>* Animaux);
-//void deplacerTous(vector<Animal>);
+
+void creeTous(int nb_lion, int nb_ours, int nb_loup, int nb_pierre, vector<Animal*> &Animaux);
+void deplacerTous(vector<Animal*> Animaux, int i);
+
 
 
 int main(int argc, const char * argv[]) {
 
-    //Faire fonction pour créer tous les animaux sur le tableau
+    //Trouver un moyen de stocker les animaux dans un vecteur
 
-    Animal *lion1 = new Lion();
-    Animal *ours1 = new Ours();
-    Animal *pierre1 = new Pierre();
-    Animal *loup1 = new DarkLoup();
-
-    vector<Animal> *Animaux;
-//    creeTous(10, 10, 10, 10, Animaux);
+    //Réponse : vector<Animal*> Animaux;
+    vector<Animal*> Animaux;
+    creeTous(10, 10, 10, 10, Animaux);
 
     int TAILLEJEU = 82;
-    affiche (TAILLEJEU, Animaux);
+    affiche (TAILLEJEU);
+
     for (int i=0; i<1; i++){
-
-        /*Trouver un moyen de stocker les animaux dans un vecteur
-
         //Lors de la victoire d'un animal supprimer le perdant du vecteur ou trouver un moyen de le faire directement avec le destructeur
 
         //Faire fonction déplacer tous
 
         //Faire fonction pour faire combattre tous
 
-        //Faire fonction pour afficher le tableau */
+        //Faire fonction pour afficher le tableau
 
-        Animal* vainqueur1 = combattre(lion1, ours1, true);
+        Animal* vainqueur1 = combattre(Animaux[0], Animaux[10], true);
 
-        Animal* vainqueur2 = combattre(vainqueur1, pierre1, true);
+        Animal* vainqueur2 = combattre(Animaux[2], Animaux[20], true);
 
-        Animal* vainqueur3 = combattre(vainqueur2, loup1, true);
     }
     return 0;
 }
@@ -129,25 +124,27 @@ Animal* combattre(Animal* animal1, Animal* animal2, bool verbose){
     return vainqueur;
 }
 
-//void creeTous(int nb_lion, int nb_ours, int nb_loup, int nb_pierre, vector<Animal>& Animaux){
-//
-  //  for (int i = 0; i<=nb_lion; i++){
-    //    Animaux.push_back(*new Lion);
-//    }
-  /*  for (int i = 0; i<=nb_ours; i++){
-        Animaux.push_back(*new Ours);
+
+void creeTous(int nb_lion, int nb_ours, int nb_loup, int nb_pierre, vector<Animal*> &Animaux){
+
+    for (int i = 0; i<=nb_lion; i++){
+        Animaux.push_back(new Lion);
+    }
+    for (int i = 0; i<=nb_ours; i++){
+        Animaux.push_back(new Ours);
     }
     for (int i = 0; i<=nb_loup; i++){
-        Animaux.push_back(*new DarkLoup);
+        Animaux.push_back(new DarkLoup);
     }
     for (int i = 0; i<=nb_pierre; i++){
-        Animaux.push_back(*new Pierre);
+        Animaux.push_back(new Pierre);
     }
+}
 
-}*/
 
-//void deplacerTous(vector<Animal>){
-    //for (int i = 0; i<=sizeof(vector<Animal>); i++) {
-        // vector<Animal>[i].deplacer(); ??? Comment acceder à la fonction déplacer de l'élément d'un vector
-    //}
-//}
+void deplacerTous(vector<Animal*> Animaux, int i){
+    for (int i = 0; i<=Animaux.size(); i++) {
+        Animaux[0]->deplace(i);
+    }
+}
+
