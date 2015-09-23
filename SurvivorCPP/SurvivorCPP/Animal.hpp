@@ -42,7 +42,7 @@ public:
 
 
 
-typedef vector<Animal*> ma_case;
+typedef vector<Animal*> animaux;
 
 
 

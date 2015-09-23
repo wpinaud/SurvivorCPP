@@ -15,24 +15,35 @@ using namespace std;
 
 void affiche (int TAILLEJEU);
 Animal* combattre(Animal *animal1, Animal *animal2, bool verbose); //Comment mettre une valeur par defaut ??
-void creeTous(int nb_lion, int nb_ours, int nb_loup, int nb_pierre);
+void creeTous(int nb_lion, int nb_ours, int nb_loup, int nb_pierre, vector<Animal>* Animaux);
 void deplacerTous(vector<Animal>);
 
 
 int main(int argc, const char * argv[]) {
+    
+    //Faire fonction pour créer tous les animaux sur le tableau
     
     Animal *lion1 = new Lion();
     Animal *ours1 = new Ours();
     Animal *pierre1 = new Pierre();
     Animal *loup1 = new DarkLoup();
     
+    vector<Animal> *Animaux;
+    creeTous(10, 10, 10, 10, Animaux);
     
     int TAILLEJEU = 82;
     affiche (TAILLEJEU);
-    for (int i=0; i<1000; i++){
-        ours1->deplace(i);
+    for (int i=0; i<1; i++){
         
-        cout << ours1->getX() << "et" << ours1->getY() << endl;
+        //Trouver un moyen de stocker les animaux dans un vecteur
+        
+        //Lors de la victoire d'un animal supprimer le perdant du vecteur ou trouver un moyen de le faire directement avec le destructeur
+        
+        //Faire fonction déplacer tous
+        
+        //Faire fonction pour faire combattre tous
+        
+        //Faire fonction pour afficher le tableau
         
         Animal* vainqueur1 = combattre(lion1, ours1, true);
         
@@ -72,8 +83,8 @@ Animal* combattre(Animal* animal1, Animal* animal2, bool verbose){
             vainqueur = animal1;
         }
         else if (attaque2=="FEUILLE") {
-            //delete animal1;
             vainqueur = ( rand()%2 ? animal1 : animal2 );
+            ( vainqueur == animal1 ? delete animal2 : delete animal1 );
         }
         else if (attaque2=="CISEAU"){
             delete animal1;
@@ -82,8 +93,8 @@ Animal* combattre(Animal* animal1, Animal* animal2, bool verbose){
     }
     else if (attaque1=="PIERRE"){
         if (attaque2=="PIERRE") {
-            //delete animal2;
             vainqueur = ( rand()%2 ? animal1 : animal2 );
+            ( vainqueur == animal1 ? delete animal2 : delete animal1 );
         }
         else if (attaque2=="FEUILLE") {
             delete animal1;
@@ -104,8 +115,8 @@ Animal* combattre(Animal* animal1, Animal* animal2, bool verbose){
             vainqueur = animal1;
         }
         else if (attaque2=="CISEAU"){
-            //delete animal2;
             vainqueur = ( rand()%2 ? animal1 : animal2 );
+            ( vainqueur == animal1 ? delete animal2 : delete animal1 );
         }
     }
     
@@ -115,19 +126,21 @@ Animal* combattre(Animal* animal1, Animal* animal2, bool verbose){
     return vainqueur;
 }
 
-void creeTous(int nb_lion, int nb_ours, int nb_loup, int nb_pierre){
+void creeTous(int nb_lion, int nb_ours, int nb_loup, int nb_pierre, vector<Animal>& Animaux){
+    
     for (int i = 0; i<=nb_lion; i++){
-        
+        Animaux.push_back(*new Lion);
     }
     for (int i = 0; i<=nb_ours; i++){
-        
+        Animaux.push_back(*new Ours);
     }
     for (int i = 0; i<=nb_loup; i++){
-        
+        Animaux.push_back(*new DarkLoup);
     }
     for (int i = 0; i<=nb_pierre; i++){
-        
+        Animaux.push_back(*new Pierre);
     }
+    
 }
 
 void deplacerTous(vector<Animal>){
