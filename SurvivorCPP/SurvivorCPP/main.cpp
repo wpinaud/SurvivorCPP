@@ -31,6 +31,7 @@ int main(int argc, const char * argv[]) {
     creeTous(100, 100, 100, 100, Animaux);
 
     int TAILLEJEU = 82;
+    
     affiche (TAILLEJEU, Animaux);
     
 
