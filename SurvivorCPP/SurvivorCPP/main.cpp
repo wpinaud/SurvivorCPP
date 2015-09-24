@@ -18,6 +18,7 @@ Animal* combattre(Animal *animal1, Animal *animal2, bool verbose); //Comment met
 
 void creeTous(int nb_lion, int nb_ours, int nb_loup, int nb_pierre, vector<Animal*> &Animaux);
 void deplacerTous(vector<Animal*> Animaux, int i);
+void combattreTous(vector<Animal*> &Animaux);
 
 
 
@@ -27,23 +28,18 @@ int main(int argc, const char * argv[]) {
 
     //Réponse : vector<Animal*> Animaux;
     vector<Animal*> Animaux;
-    creeTous(10, 10, 10, 10, Animaux);
+    creeTous(100, 100, 100, 100, Animaux);
 
     int TAILLEJEU = 82;
     affiche (TAILLEJEU, Animaux);
+    
 
-    for (int i=0; i<1; i++){
-        //Lors de la victoire d'un animal supprimer le perdant du vecteur ou trouver un moyen de le faire directement avec le destructeur
+    for (int i=0; i<100; i++){
+        
+        deplacerTous(Animaux, i);
+        combattreTous(Animaux);
+        affiche (TAILLEJEU, Animaux);
 
-        //Faire fonction déplacer tous
-
-        //Faire fonction pour faire combattre tous
-
-        //Faire fonction pour afficher le tableau
-
-        Animal* vainqueur1 = combattre(Animaux[0], Animaux[10], true);
-
-        Animal* vainqueur2 = combattre(Animaux[2], Animaux[20], true);
 
     }
     return 0;
@@ -146,14 +142,40 @@ void deplacerTous(vector<Animal*> Animaux, int i){
     for (int i = 0; i<=Animaux.size(); i++) {
         Animaux[0]->deplace(i);
     }
-    for (int i = 0; i<=Animaux.size(); i++) {
-        for (int j = i+1; j<=Animaux.size(); j++) {
+}
+
+void combattreTous(vector<Animal*> &Animaux){
+    for (int i = 0; i<Animaux.size(); i++) {
+        for (int j = i+1; j<Animaux.size(); j++) {
             if (Animaux[i]->getX()==Animaux[j]->getX()) {
                 if (Animaux[i]->getY()==Animaux[j]->getY()) {
                     Animal* vainqueur = combattre(Animaux[i], Animaux[j], true);
+                    
+                    if (vainqueur == Animaux[i]) {
+                        for(std::vector<Animal*>::iterator it = Animaux.begin(); it != Animaux.end(); it++)
+                        {
+                            if (*it == Animaux[j])
+                            {
+                                Animaux.erase(it);
+                                break;  //it is now invalud must break!
+                            }
+                        }
+                    }
+                    else{
+                        for(std::vector<Animal*>::iterator it = Animaux.begin(); it != Animaux.end(); it++)
+                        {
+                            if (*it == Animaux[i])
+                            {
+                                Animaux.erase(it);
+                                break;  //it is now invalud must break!
+                            }
+                        }
+                    }
+                    
                 }
             }
         }
     }
+
 }
 
