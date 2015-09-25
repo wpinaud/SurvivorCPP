@@ -149,7 +149,11 @@ for (int unsigned u=0; u<Animaux.size(); u++){
 On affiche ensuite chaque case du tableau avec son contenu, en alignant les colonnes avec des tabulations. 
 
 ###Limite de notre jeu (bugs et autres joyeusetés)
+D'abord, quand on initialise le plateau de jeu, on constate que les ours sont presque tous sur la diagonale du plateau (x=y). 
 
+Ensuite, notre code fonctionne correctement sur le MacBook de Willis, mais fait planter l'ordinateur sous Windows (Le message : "Le programme ne réponds pas" apparaît). 
+
+Enfin, les loups ne survivent pas très longtemps: bien moins que les lions et les ours. 
 
 ##Jeux de tests
 
