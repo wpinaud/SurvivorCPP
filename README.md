@@ -52,20 +52,22 @@ Notre classe Loup personnalisée possède les caractéristiques suivantes:
 
 #### Solution 1
 * Bourrin et débile *
-1) Fonction d'attaque
+
+1. Fonction d'attaque
 Le loup attaque aléatoirement avec une équiprobabilité entre pierre, feuille et ciseaux. 
 
-2) Fonction de déplacement
+2. Fonction de déplacement
 Dans ce cas, on parcourt l'intégralité de la grille en se déplaçant toujours vers la droite (x++), sauf quand le nombre de tours est un multiple de 82, où l'on se déplace vers le bas (y++). 
 
-3) Autres singularités?
+3. Autres singularités?
 L'espérence de vie de ce loup n'est pas très élevée à priori. 
 
 #### Solution 2
 * Le Loup imitant la pierre *
 
-1) Fonction d'attaque
+1. Fonction d'attaque
 Ce loup ne risquant pas de croiser une pierre, il attaque principalement avec ciseaux (probabilité égale à 60%, contre 20% pour pierre et feuille): 
+
 ```c
 std::string DarkLoup::attaquer(){
 	int i = rand()%10; // génère un nombre aléatoire entre 0 et 9
@@ -84,23 +86,26 @@ std::string DarkLoup::attaquer(){
 	}
 ```
 
-2) Fonction de déplacement
+2. Fonction de déplacement
 Ce loup imite la pierre: il ne se déplace pas. Cela lui évite de se battre contre des pierres. 
 
-3) Singularité
+3. Singularité
 Ce loup est plus robuste que les autres, car il a de grandes chances de survie contre tous les animaux qu'il peut croiser (il ne peut pas croiser de pierre) à part les autres loups. 
 Dans ce cas, quelle que soit la stratégie du loup adverse, c'est lui qui s'est déplacé, il a donc prévu de pouvoir affronter les pierres et a donc moins de chances de victoire sur ce loup. 
 
 
 #### Solution 3
 * Loup imitant un Ours *
-1) Fonction d'attaque
+
+1. Fonction d'attaque
+
 De la même manière que le loup imitant la pierre, ce loup imite l'ours, et donc ne peut en affronter qu'au premier tour. Il attaque donc majoritairement avec pierre (60% de proba, comme pour la pierre). 
 
-2) Fonction de déplacement
+2. Fonction de déplacement
 La fonction de déplacement de ce loup est celle de l'ours. 
 
-3) Singularité
+3. Singularité
+
 Ce loup risque de mourir vite s'il rencontre des lions, car il joue à quitte ou double contre eux. 
 
 ##Principe du jeu
@@ -157,9 +162,11 @@ Enfin, les loups ne survivent pas très longtemps: bien moins que les lions et l
 
 ##Jeux de tests
 
-###Initialisation
+###La table de jeu
+![Table](Table.jpg "")
 
-###Premier tour
+###Les combats
+![Combats](Combats.jpg "")
 
 ...
 
