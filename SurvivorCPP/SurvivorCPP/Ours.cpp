@@ -2,7 +2,7 @@
 
 Ours::Ours(){
     y=rand()%82;
-    x=rand()%82;
+    x=rand()*rand()%82;
 }
 
 Ours::~Ours(){

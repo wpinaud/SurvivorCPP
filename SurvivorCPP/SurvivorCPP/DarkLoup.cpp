@@ -8,7 +8,7 @@ DarkLoup::DarkLoup(){
 void DarkLoup::deplace(int i){
     int t= i%82;
 
-    if (t=0){y=(y+1)%82;}
+    if (t==0){y=(y+1)%82;}
     else {x=(x+1)%82;}; /* Méthode "stupide": on parcourt le terrain et on attaque aléatoirement */
     /*switch (t){
         case 0: //bas
