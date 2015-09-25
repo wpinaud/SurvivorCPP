@@ -30,7 +30,6 @@ int main(int argc, const char * argv[]) {
     creeTous(10, 10, 10, 10, Animaux);
 
     int TAILLEJEU = 82;
-    //affiche (TAILLEJEU, Animaux);
     affiche (TAILLEJEU, Animaux);
 
     for (int i=0; i<1; i++){
