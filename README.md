@@ -7,7 +7,7 @@ Dans cette partie nous presenterons des différents choix de construction que no
 ###La classe Animal
 La classe Animal a été structurée suite à un dialogue entre tous les étudiants de l'option.
 Voici le diagramme UML la représentant:
-![UML](Animal.jpg "Diagramme UML de la classe")
+![UML](https://github.com/wpinaud/SurvivorCPP/blob/master/Animal.jpg "Diagramme UML de la classe")
 
 ###Les sous-classes d'animaux
 Chaque classe d'animaux reprend les fonctions virtuelles de la classe mère pour les redéfinir.
@@ -163,10 +163,10 @@ Enfin, les loups ne survivent pas très longtemps: bien moins que les lions et l
 ##Jeux de tests
 
 ###La table de jeu
-![Table](Table.jpg "")
+![Table](https://github.com/wpinaud/SurvivorCPP/blob/master/Table.jpg "")
 
 ###Les combats
-![Combats](Combats.jpg "")
+![Combats](https://github.com/wpinaud/SurvivorCPP/blob/master/Combats.jpg "")
 
 ...
 
