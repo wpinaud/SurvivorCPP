@@ -25,8 +25,8 @@ void DarkLoup::deplace(int i){
 
         case 3: //gauche
             x--;
-            break;*/ /* Méthode "intel": on fait le mouvement d'un ours et on joue principalement pierre*/
-    }
+            break;*/ /* Méthode "intel": on fait le mouvement d'un ours et on joue principalement pierre
+            }*/
 }
 
 char DarkLoup::nom(){

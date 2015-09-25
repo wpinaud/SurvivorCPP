@@ -32,6 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Animal.cpp" />
+		<Unit filename="Animal.hpp" />
+		<Unit filename="DarkLoup.cpp" />
+		<Unit filename="DarkLoup.hpp" />
+		<Unit filename="Lion.cpp" />
+		<Unit filename="Lion.hpp" />
+		<Unit filename="Ours.cpp" />
+		<Unit filename="Ours.hpp" />
+		<Unit filename="Pierre.cpp" />
+		<Unit filename="Pierre.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

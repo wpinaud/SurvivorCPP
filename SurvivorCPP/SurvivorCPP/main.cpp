@@ -31,6 +31,7 @@ int main(int argc, const char * argv[]) {
 
     int TAILLEJEU = 82;
     //affiche (TAILLEJEU, Animaux);
+    affiche (TAILLEJEU, Animaux);
 
     for (int i=0; i<1; i++){
         //Lors de la victoire d'un animal supprimer le perdant du vecteur ou trouver un moyen de le faire directement avec le destructeur
