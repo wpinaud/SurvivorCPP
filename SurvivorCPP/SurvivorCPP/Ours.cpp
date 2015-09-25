@@ -14,19 +14,19 @@ void Ours::deplace(int i){
 
     switch (t){
         case 0: //bas
-            y++;
+            y = (y+1)%82;
             break;
 
         case 1: //droite
-            x++;
+            x= (x+1)%82;
             break;
 
         case 2: //haut
-            y--;
+            y= (y-1)%82;
             break;
 
         case 3: //gauche
-            x--;
+            x= (y-1)%82;
             break;
     }
 

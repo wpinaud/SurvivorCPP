@@ -14,8 +14,6 @@ Pierre::Pierre(){
 }
 
 void Pierre::deplace(int i){
-    this->x=0;
-    this->y=0;
 }
 
 char Pierre::nom(){
@@ -28,5 +26,5 @@ std::string Pierre::attaquer(){
 }
 
 Pierre::~Pierre(){
-    
+
 }
